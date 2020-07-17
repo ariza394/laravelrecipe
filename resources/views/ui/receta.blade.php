@@ -7,7 +7,7 @@
 
             <div class="meta-receta d-flex justify-content-between">
                 @php
-                    $fecha = $receta->created_at
+                    $fecha = $receta->created_at    
                 @endphp
 
                 <p class="text-primary fecha font-weight-bold">
