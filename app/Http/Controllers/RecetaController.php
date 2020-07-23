@@ -70,16 +70,16 @@ class RecetaController extends Controller
             'titulo' => 'required|min:6',
             'categoria' => 'required',
             'preparacion' => 'required',
-            'ingredientes' => 'required'
-            //'imagen' => 'required||image'
+            'ingredientes' => 'required',
+            'imagen' => 'required||image'
         ]);
         
         //path image
-       /* $ruta_imagen = $request['imagen']->store('upload-recetas','public');
+        $ruta_imagen = $request['imagen']->store('upload-recetas','public');
 
         //image resize
         $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1000,550);
-        $img->save();*/
+        $img->save();
 
         //insert data(sin modelo)
        /* DB::table('recetas')->insert([
@@ -96,7 +96,7 @@ class RecetaController extends Controller
             'titulo' => $data['titulo'],
             'preparacion' =>$data['preparacion'],
             'ingredientes' =>$data['ingredientes'],
-            //'imagen' => $ruta_imagen,
+            'imagen' => $ruta_imagen,
             'imagen' => $data['categoria'],
             'categoria_id' =>$data['categoria']
         ]); 

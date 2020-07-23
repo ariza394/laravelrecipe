@@ -91,9 +91,9 @@
                         type="file" 
                         class="form-control @error('imagen')  is-invalid @enderror"
                         name="imagen"
-                        disabled
+                        
                     >
-                    <h6>sorry, it is no available in production</h6>
+                   
                     @error('imagen')
                         <span class="invalid-feedback d-block" role="alert">
                             <strong>{{$message}}</strong>
