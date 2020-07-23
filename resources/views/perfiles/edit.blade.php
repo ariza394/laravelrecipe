@@ -82,14 +82,13 @@
                         type="file" 
                         class="form-control @error('imagen')  is-invalid @enderror"
                         name="imagen"
-                        disabled
+                        
                     >
-                    <h6>Sorry, images are not available in production by costs</h6>
                     @if($perfil->imagen)
                         <div class="mt-4">
                             <p>Current Image:</p>
-                           <!-- <img src="/storage/{{$perfil->imagen}}" alt="" style="width:300px">-->
-                           <img src="{{asset('images/chef.jpg')}}"alt="chef img" style="width:300px">
+                            <img src="/storage/{{$perfil->imagen}}" alt="" style="width:300px">
+                           <!--<img src="{{asset('images/chef.jpg')}}"alt="chef img" style="width:300px">-->
                         </div>
                         @error('imagen')
                             <span class="invalid-feedback d-block" role="alert">
