@@ -17,7 +17,7 @@ class InicioController extends Controller
         $votadas =Receta::withCount('likes')->orderBy('likes_count','desc')->take(3)->get(); //withcount crea nueva columna llamada likes_count
 
         //pobtener recetas nuevas
-        $nuevas = Receta::latest()->limit(2)->get();
+        $nuevas = Receta::latest()->limit(3)->get();
 
         //obtener categorias
         $categorias = CategoriaReceta::all();
