@@ -29,8 +29,8 @@
             @foreach($nuevas as $nueva)
                 <div class="col-md-4">
                     <div class="card">
-                        <!--<img src="/storage/{{$nueva->imagen}}" alt="receta" class="card-img-top">-->
-                        <img src="{{ asset("/images/$nueva->imagen.jpg") }}" alt="receta" class="card-img-top">
+                        <img src="/storage/{{$nueva->imagen}}" alt="receta" class="card-img-top">
+                        <!--<img src="{{ asset("/images/$nueva->imagen.jpg") }}" alt="receta" class="card-img-top">-->
                         <div class="card-body">
                             <h3>{{$nueva->titulo}}</h3>
                             <p>{{ Str::words( strip_tags($nueva->preparacion),20)}} </p>
